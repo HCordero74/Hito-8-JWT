@@ -17,7 +17,7 @@ const Pizza = () => {
   useEffect(() => {
     const fetchPizzaData = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/pizzas/${id}`);
+        const response = await fetch(`https://hito-8-jwt.onrender.com/api/pizzas/${id}`);
         const data = await response.json();
         setPizza(data);
       } catch (error) {

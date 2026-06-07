@@ -12,7 +12,7 @@ export const UserProvider = ({ children }) => {
   // Método para iniciar sesión consumiendo la API del backend
   const login = async (email, password) => {
     try {
-      const response = await fetch("http://localhost:5000/api/auth/login", {
+      const response = await fetch("https://hito-8-jwt.onrender.com/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -35,7 +35,7 @@ export const UserProvider = ({ children }) => {
   // Forma para registrar un nuevo usuario consumiendo la API
   const register = async (email, password) => {
     try {
-      const response = await fetch("http://localhost:5000/api/auth/register", {
+      const response = await fetch("https://hito-8-jwt.onrender.com/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -65,7 +65,7 @@ export const UserProvider = ({ children }) => {
   const getProfile = async () => {
     if (!token) return null;
     try {
-      const response = await fetch("http://localhost:5000/api/auth/me", {
+      const response = await fetch("https://hito-8-jwt.onrender.com/api/auth/me", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

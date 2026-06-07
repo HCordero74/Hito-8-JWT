@@ -11,7 +11,7 @@ export const GlobalProvider = ({ children }) => {
 // Se Trae las pizzas desde la API local
   const getPizzas = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/pizzas");
+      const response = await fetch("https://hito-8-jwt.onrender.com/api/pizzas");
       const data = await response.json();
       setPizzas(data);
     } catch (error) {

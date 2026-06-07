@@ -16,7 +16,7 @@ const Cart = () => {
   // Función para enviar el carrito al backend
   const handleCheckout = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/checkouts", {
+      const response = await fetch("https://hito-8-jwt.onrender.com/api/checkouts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
